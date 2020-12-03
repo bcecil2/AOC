@@ -13,32 +13,29 @@ def dup(m):
 
 curr = clean
 end = len(clean)
-for i in range((end-1)//2):
-   curr = dup(curr)
+#for i in range((end-1)//2):
+#   curr = dup(curr)
 
 x = 0
 y = 0
 trees = 0
-while x+3 < len(curr[y]) and y+1 < end:
-    x += 3
+while y+1 < end:
     y += 1
+    x = (x + 3) % len(curr[y])
     if curr[y][x] == '#':
         trees += 1
 print(trees)
 
 def general(r,d,clean):
-    curr = clean
     end = len(clean)
-    for i in range(end):
-        curr = dup(curr)
 
     x = 0
     y = 0
     trees = 0
-    while x+r < len(curr[y]) and y+d < end:
-        x += r 
-        y += d 
-        if curr[y][x] == '#':
+    while y+d < end:
+        y += d
+        x = (x + r) % len(clean[y]) 
+        if clean[y][x] == '#':
             trees += 1
     return trees
 
