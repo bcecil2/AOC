@@ -1,7 +1,6 @@
 f = open("p4.txt","r")
 lines = [l.rstrip() for l in f.readlines()]
 
-keys = ["byr","iyr","eyr","hgt","hcl","ecl","pid","cid"]
 
 def isValid(key,val):
     if key == "byr":
