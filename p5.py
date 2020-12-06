@@ -1,5 +1,5 @@
 import math
-f = open("p5.txt","r")
+ = open("p5.txt","r")
 lines = [l.rstrip() for l in f.readlines()]
 
 def row(char,lower,upper):
