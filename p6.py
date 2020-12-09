@@ -1,4 +1,3 @@
-import functools
 
 f = open("p6.txt","r").read().split("\n\n")
 
