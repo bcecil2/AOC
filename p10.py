@@ -23,8 +23,8 @@ DP = {}
 def dp(i):
     if i == len(lines)-1:
         return 1
-    if i in DP:
-        return DP[i]
+    #if i in DP:
+    #    return DP[i]
     ans = 0
     '''
     for j in range(i+1,min(i+4,len(lines))):
@@ -36,7 +36,7 @@ def dp(i):
         idx = lines.index(j) if j in lines else None
         if idx != None:
             ans += dp(idx)
-    DP[i] = ans
+    #DP[i] = ans
     return ans
 
 print(dp(0))
